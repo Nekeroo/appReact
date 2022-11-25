@@ -8,7 +8,7 @@ function Issues() {
     let { id } = useParams()
     /* allows us to perform side effects in your components */
     useEffect(() => {
-        fetch('https://framagit.org/api/v4/projects/' +  id  + '/issues?membership=true', {
+        if (id) fetch('https://framagit.org/api/v4/projects/' +  id  + '/issues?membership=true', {
             method: 'get',
             headers: new Headers({
                 'PRIVATE-TOKEN' : 'glpat-auESVMAxA27xgNFpu11w',
@@ -21,7 +21,6 @@ function Issues() {
 
     const fuse = new Fuse(issues);
     let nbIssues = fuse.getIndex().size();
-
     return (
         // Affichage des Issuses par rapport au projet sélectionné.
         <div className='issues'>
