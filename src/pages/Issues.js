@@ -5,9 +5,10 @@ import { useParams } from "react-router-dom";
 function Issues() {
     const [issues, setIssues] = useState([])
 
-    let { id } = useParams()
+    
     /* allows us to perform side effects in your components */
     useEffect(() => {
+        let { id } = useParams()
         if (id) fetch('https://framagit.org/api/v4/projects/' +  id  + '/issues?membership=true', {
             method: 'get',
             headers: new Headers({
