@@ -17,7 +17,7 @@ function Issues() {
         })
             .then((response) => response.json())
             .then((data) => setIssues(data))
-    },[]);
+    });
 
     const fuse = new Fuse(issues);
     let nbIssues = fuse.getIndex().size();
