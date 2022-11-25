@@ -19,13 +19,14 @@ function Issues() {
             .then((data) => setIssues(data))
     });
 
-    const fuse = new Fuse(issues);
-    let nbIssues = fuse.getIndex().size();
+    // const fuse = new Fuse(issues);
+    
     return (
+    
         // Affichage des Issuses par rapport au projet sélectionné.
         <div className='issues'>
             {/* <h1 className="title">Issues</h1>
-            <h3 className="littleTitle">Number of issues : {nbIssues}</h3>
+            <h3 className="littleTitle">Number of issues : {fuse.getIndex().size}</h3>
                 {Array.isArray(issues) && issues.map(item => (
                 <div>
                     <a href={item.web_url}>{item.title}</a>
