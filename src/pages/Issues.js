@@ -24,14 +24,14 @@ function Issues() {
     return (
         // Affichage des Issuses par rapport au projet sélectionné.
         <div className='issues'>
-            <h1 className="title">Issues</h1>
+            {/* <h1 className="title">Issues</h1>
             <h3 className="littleTitle">Number of issues : {nbIssues}</h3>
                 {Array.isArray(issues) && issues.map(item => (
                 <div>
                     <a href={item.web_url}>{item.title}</a>
-                    <br></br>
+                    <br/>
                 </div>
-                ))}
+                ))} */}
         </div>
 
     )

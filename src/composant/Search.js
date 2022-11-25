@@ -28,7 +28,7 @@ function SearchFuse({projects}) {
           {results && results.map(({item}) => (
             <div>
                 <a href={"/issues/"+item.id}>{item.name}</a>
-                <br></br>
+                <br/>
             </div>
             ))}
         </div>
