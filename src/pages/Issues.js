@@ -20,7 +20,9 @@ function Issues() {
     });
 
     const fuse = new Fuse(issues);
-    
+    //https://www.apprendre-react.fr/tutorial/library/flux/redux-from-scratch/
+    //https://codesandbox.io/s/react-redux-bookmark-app-forked-v4vb6c?file=/src/reducers/index.js
+    // Liens pour implémenter Redux
     return (
         //Affichage des Issuses par rapport au projet sélectionné.
         <div className='issues'>
