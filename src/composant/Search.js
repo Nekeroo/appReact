@@ -5,7 +5,7 @@ function SearchFuse({projects}) {
 
     const [results, setResults] = useState()
 
-    if(!results || results.length === 0) setResults(projects.map((project) => { return {item: project}}))
+    if (!results || results.length === 0) setResults(projects.map((project) => {return {item: project}}))
 
     const fuse = new Fuse(projects, {
         keys: [
@@ -13,7 +13,6 @@ function SearchFuse({projects}) {
             'name'
         ],
     })
-    // const que = fuse.search(query)
 
     
     function onSearch({currentTarget}) {
