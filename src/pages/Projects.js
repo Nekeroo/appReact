@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 function Projects() {
 
-  // const projects = useSelector(state => console.log(state))
+
 
   const [projects, setProjects] = useState([])
 
@@ -24,16 +24,17 @@ function Projects() {
   },[]);
 
   return(
-    <div className='projects'>
-        <h1 className="title">Projects from Nekeroo</h1>
-        {/* {Array.isArray(projects) && projects.map(item => (
-          <div>
-            <a href={"/issues/"+item.id}>{item.name}</a>
-            <br></br>
-          </div>
-        ))} */}
-        {projects.length > 0 && <SearchFuse projects={projects}/>}
-    </div>
+    
+     <div className='projects'>
+         <h1 className="title">Projects from Nekeroo</h1>
+         {/* {Array.isArray(projects) && projects.map(item => (
+           <div>
+             <a href={"/issues/"+item.id}>{item.name}</a>
+             <br></br>
+           </div>
+         ))} */}
+         {projects.length > 0 && <SearchFuse projects={projects}/>}
+     </div> 
   )
 }
 

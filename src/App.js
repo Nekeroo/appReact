@@ -5,14 +5,11 @@ import About from './pages/About';
 import Projects from './pages/Projects'
 import Nav from './composant/Navigation';
 import Issues from "./pages/Issues";
-import { Provider } from "react-redux";
-import { store } from "./composant/redux"
 
 
 
 function App() {
   return (
-    <Provider store={store}>
     <div className="App">
         <Nav/>
         <Routes>
@@ -22,7 +19,6 @@ function App() {
           <Route path='issues/:id' element={ <Issues />} />
         </Routes>
     </div>
-    </Provider>
     /* Création des # routes pour l'accès aux autres pages */
     );
 }
