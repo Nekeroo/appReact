@@ -24,12 +24,14 @@ function SearchFuse({projects}) {
         <div>
           <input type="text" onChange={onSearch} placeholder="Enter a project name"></input>
           <h3 className="littleTitle">Nb of projects : {results ? results.length : projects.length}</h3>
+          <ul className="ListProject">
           {results && results.map(({item}) => (
             <div>
-                <a href={"/issues/"+item.id}>{item.name}</a>
+                <li className="projectalone"><a href={"/issues/"+item.id}>{item.name}</a></li>
                 <br/>
             </div>
             ))}
+            </ul>
         </div>
     )
 }

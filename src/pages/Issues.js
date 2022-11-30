@@ -28,12 +28,14 @@ function Issues() {
         <div className='issues'>
             <h1 className="title">Issues</h1>
             <h3 className="littleTitle">Number of issues : {(fuse.getIndex().size() > 0) ? fuse.getIndex().size() : 0}</h3>
+            <ul>
                 {Array.isArray(issues) && issues.map(item => (
                 <div>
-                    <a href={item.web_url}>{item.title}</a>
+                    <li className="issuealone"><a href={item.web_url}>{item.title}</a></li>
                     <br/>
                 </div>
                 ))}
+                </ul>
         </div>
     )
 }

@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react';
 import SearchFuse from '../composant/Search';
+// import { useSelector } from "react-redux";
+import { useState, useEffect } from 'react';
+
 
 
 function Projects() {
 
+  // const projects = useSelector(state => console.log(state))
 
   const [projects, setProjects] = useState([])
 
