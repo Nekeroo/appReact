@@ -3,7 +3,10 @@ import React from "react";
 
 function Home() {
     return (
-        <h1>Framagit API</h1>
+        <div>
+            <h1 className="title">Framagit API</h1>
+            <h3 className="littleTitle">Site développé en React avec l'api Framagit</h3>
+        </div>
     )
 }
 
