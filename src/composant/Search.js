@@ -1,9 +1,14 @@
 import Fuse from "fuse.js"
 import React, { useState } from 'react';
+import { useDispatch } from "react-redux";
+import { Button } from "react-bulma-components";
+import {addFavoris} from "../store/features/projectSlice"
 
 function SearchFuse({projects}) {
 
     const [results, setResults] = useState()
+
+    const dispatch = useDispatch()
 
     if (!results || results.length === 0) setResults(projects.map((project) => {return {item: project}}))
 
@@ -28,6 +33,9 @@ function SearchFuse({projects}) {
           {results && results.map(({item}) => (
             <div>
                 <li className="projectalone"><a href={"/issues/"+item.id}>{item.name}</a></li>
+                <Button variant="containes" onClick={() => {
+                    dispatch(addFavoris(item.name))
+                }} >Add Favoris</Button>
                 <br/>
             </div>
             ))}

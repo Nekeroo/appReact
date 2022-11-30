@@ -5,6 +5,7 @@ import About from './pages/About';
 import Projects from './pages/Projects'
 import Nav from './composant/Navigation';
 import Issues from "./pages/Issues";
+import Favoris from './pages/Favoris';
 
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='about' element={ <About/>} />
           <Route path='projects' element={ <Projects/>} />
           <Route path='issues/:id' element={ <Issues />} />
+          <Route path='favoris' element={ <Favoris/>} />
         </Routes>
     </div>
     /* Création des # routes pour l'accès aux autres pages */

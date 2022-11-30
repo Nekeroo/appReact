@@ -7,6 +7,7 @@ function Nav() {
             <NavLink className='navBar' to='/home'>Accueil</NavLink>
             <NavLink className='navBar' to='/projects'>Les Projets</NavLink>
             <NavLink className='navBar' to='/about'>A propos</NavLink>
+            <NavLink className='navBar' to='/favoris'>Projets Favoris</NavLink>
         </div>
     )
 }
